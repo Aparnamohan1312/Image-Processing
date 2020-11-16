@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Image Survey HTML Form by templatemo</title>
+
+    <!-- load CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600">
+    <!-- Google web font "Open Sans" -->
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <!-- https://materializecss.com -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- https://getbootstrap.com/ -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- https://fontawesome.com/ -->
+    <link rel="stylesheet" href="css/templatemo-style.css">
+    <!-- Template Mo style -->
+    <!--
+	Image Survey Form Template
+	https://templatemo.com/tm-523-image-survey
+	-->
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-7">
+                
+                <h1 class="tm-site-name"><b>REGION OF INTEREST DETECTION</b></h1>
+                <h5 class="tm-site-name"><b>Done by: Aparna M (18BCE1056)</b></h5>
+            </div>
+            <div class="col-sm-12 col-md-5 mt-md-0 mt-5">
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="tm-parallax"></div>
+            </div>
+        </div>
+        <div class="row">
+<h2 class="tm-question-header"><b>Introduction:</h2>
+            <div class="tm-intro">
+              
+                <div class="col-sm-12 col-md-8 mb-md-0 mb-4 tm-intro-left">
+                  
+                    <p class="mb-0">A region of interest (ROI) is a portion of an image that you want to filter or perform some other operation on.  ROI is done by creating a binary mask, which is a binary image that is the same size as the image we want to process with pixels that define the ROI set to 1 and all other pixels set to 0. The concept of a ROI is commonly used in many application areas, for example, in medical imaging. Here I hace used this significant ROI technique to detect a particular portion of the input image liek the medical seal in the certificates for forgery detection.</p>
+                </div>
+            </div>
+            <div class="col-12">
+                <hr>
+            </div>
+        </div>
+
+        <div class="row">
+<h2 class="tm-question-header"><b>Mathematical Interpretation:</h2>
+            <div class="tm-intro">
+              
+                <div class="col-sm-12 col-md-8 mb-md-0 mb-4 tm-intro-left">
+                  
+                    <p class="mb-0">Spatial scale is a scaling parameter for resizing the proposal according to the feature map dimensions. Let's say in our network, the image size is 1056x640 and due to many convolution and pooling operations, the feature map size reduced to 66x40, which is being used by ROI pooling. Now the proposals are generated based on input image size, so we need to rescale the proposals to feature map size. In this case, we can divide all dimensions of proposal by 16 (1056/66=16 or 640/40=16). So the spatial scale will be 1/16 in the DEMO depicted below.</p>
+ </div>
+            </div>
+            <div class="col-12">
+                <hr>
+            </div>
+        </div>
+                   <h3><b> DEMO Of The Mathematical Interpretation</b></h3>
+                   <img src = "images\roi.gif"></img>
+                </div>
+            </div>
+            <div class="col-12">
+                <hr>
+            </div>
+        </div>
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="tm-question-header">Related Works:</h2>
+                    <img src="images\refpic2.jpg"></img>
+
+                    <div class="tm-q-choice-container">
+                       
+<p>Those are the few of the related works in the field of forgery detection and region of interest.</p>
+                    </div>
+                </div> <!-- col-12 -->
+                <div class="col-12">
+                    <hr>
+                </div>
+                <div class="col-12">
+<br>
+                    <h2 class="tm-question-header">Tools Used</h2>
+                    <p>The tools that I have used for this project are:</p>
+                    <ol type="I">
+  <li>OPEN CV</li>
+<li> Python</li>
+</ol>
+                </div> <!-- col-12 -->
+                <div class="col-12">
+                    <hr>
+                </div>
+<div class="col-12">
+                   
+                </div>
+                <div class="col-12">
+<br>
+                    <h2 class="tm-question-header">DATASET SPECIFICATIONS</h2>
+                    <p>Click on the LINKS to view The DATASET images that I have used for this project:</p>
+                        <a href="https://drive.google.com/file/d/1toHAPI5WBj-MMQhgvcmfJLMIlwryQIDN/view?usp=sharing">Image 1</a><br>
+                        <a href="https://drive.google.com/file/d/18SI__-aV9Mxr-UzJY4_xdZYSQqILSaNd/view?usp=sharing">Image 2</a><br>
+                        <a href="https://drive.google.com/file/d/129H3JHs6jWeQDbfu1MjKByPcS_r4coCu/view?usp=sharing">Image 3</a><br>
+                        <a href="https://drive.google.com/file/d/1ea-SVl8VLJHyiwQ28XvSK99oDxNJe6nI/view?usp=sharing">Image 4</a><br>
+                        <a href="https://drive.google.com/file/d/1qGivu5c4oRjW_oh4QsutalGt6unaZIM8/view?usp=sharing">Image 5</a>
+                </div> <!-- col-12 -->
+                <div class="col-12">
+                    
+                </div>
+<div class="col-12">
+                    <hr>
+                </div>
+                <div class="col-12">
+<br>
+                    <h2 class="tm-question-header">Proposed Methodology</h2>
+                    <p>Many common image operations are performed using Region of Interest in OpenCV. A ROI allows us to operate on a rectangular subset of the image.The typical series of steps to use ROI is: create a ROI on the image, perform the operation you want on this subregion of the image, reset back the ROI. The proposed work includes detection a rectangular or square portion of a coloured strip segment in the input images by applying several techniques like masking,blurring,drawing contours and implementing certain mathematical formula like the distance formula to control the detected portion of the image and restricted it to certain values of pixels in the cartesian x and y coordinates. The HSV, LAB values of the detected ROI portion is then obtained as a result. These values are stored as csv files for further processing which can be used as input dataset for predictions using Machine Learning. </p>
+                    
+                </div> <!-- col-12 -->
+                <div class="col-12">
+                    <hr>
+                </div>
+<div class="col-12">
+                    
+                </div>
+                <div class="col-12">
+                    <br>
+                    <h2 class="tm-question-header">CODE SEGMENT</h2>
+                    <h3>ROI code and HSV LAB values detection and saving as csv files</h3>
+                     <img src = "images\outputroi.jpg"></img>
+                     <img src = "images\output2roi.jpg"></img>
+                </div> <!-- col-12 -->
+                
+                <div class="col-12 tm-respondent-info">
+                	<hr>
+                        <br>
+                	<h2 class="tm-question-header">Output and Result Analysis</h2>
+			
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4">
+                                  <img src ="images\roi_output1.jpg"></img>         
+                                   <img src ="images\roi_output2.jpg"></img>     
+                                     <img src ="images\roi_output3.jpg"></img>  
+                                    <img src ="images\roi_output4.jpg"></img>      
+                                     <img src ="images\roi_output5.jpg"></img>    
+                                      <img src ="images\csvfileop.jpg"></img>    
+                      <p>The region of interest is detected for the input images which is highligted by drawing a green ine in the output. A particular portion of the image is selected and various operations are performed on the image. The Hue, Saturation and LAB values of the detetected portion of the input image is obtained and these values are stored in csv file. This file can further be fed as input dataset for the Machine learning processing and for the prediction models.<p>                         
+                <div class="col-12">
+</div>
+                   
+                </div>
+            </div> <!-- row -->
+        
+ <hr>
+ </body>
+</html>
